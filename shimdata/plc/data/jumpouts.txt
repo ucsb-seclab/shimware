@@ -1,0 +1,47 @@
+# the guy
+0x174BF4: "network_filter"
+
+# IRQ1_HANDLER_UNDEF
+0x34fa30: "breakpoint"
+
+# IRQ7
+0x34CBF4: "breakpoint"
+
+# DEATH
+0x34CD1C: "breakpoint"
+
+# ERROR_LOG
+0x34CA38: "breakpoint"
+
+# harakiri
+0x34C4E4: "breakpoint"
+
+# config_serial_port (This guy gets called!) (patching this out now)
+# 0x2f83b8: "breakpoint"
+
+# other serial config guy (patching this out now)
+# 0x2f8358: "breakpoint"
+
+# 0x2f84d8: "configure"
+
+# end of REGISTER_SOME_HW_HANDLERS
+# 0x226B88: "breakpoint"
+
+# end of main
+# 0x1001a0: "breakpoint"
+
+# end of context switch
+# 0x34E65C: "breakpoint"
+
+# after second yield in iomapacc_2
+# 0x24aebc: "breakpoint"
+
+# IS THIS THE KILLER? no :(
+# 0x13f4bc: "breakpoint"
+
+# wow
+# 0x16ADC0: "breakpoint"
+
+
+# IRQ 0x48
+# 0x34E788: "breakpoint"

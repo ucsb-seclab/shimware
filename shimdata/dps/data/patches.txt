@@ -1,0 +1,2 @@
+# nop out the typical load of the max value; we'll do it ourselves
+0x08001DFC: "\x00\xbf"

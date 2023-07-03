@@ -1,0 +1,17 @@
+# make crc function immediately return true
+0x08000856: "\x4f\xf0\x01\x00\x70\x47"
+
+# make branch always taken in firmware verification path
+0x08000C48: "\x14\xe0"
+
+# make sure crc "matches"
+0x08005470: "\x0d\xe0"
+
+# make branch never taken to ensure firmware crc "matches"
+0x08005248: "\x00\xbf"
+
+# disable watchdogs
+0x08000CD8: "\x0e\xe0"
+
+# force Power-on-Reset (POR) mode
+0x08000ECE: "\x00\xbf"

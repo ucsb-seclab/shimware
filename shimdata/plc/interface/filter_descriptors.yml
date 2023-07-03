@@ -1,0 +1,24 @@
+filters:
+  tag_write_clamp:
+    index: 0
+    params:
+      - name: "tag_name_offset"
+        type: "string_offset"
+
+      - name: "tag_type"
+        type: "uint16_t"
+
+      - name: "min"
+        type: "tag_v"
+
+      - name: "max"
+        type: "tag_v"
+    enums:
+      SINT: 0x00C2
+      INT:  0x00C3
+      DINT: 0x00C4
+      LINT: 0x00C5
+      REAL: 0x00CA
+
+  always_match:
+    index: 1

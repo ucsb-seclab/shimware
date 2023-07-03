@@ -1,0 +1,52 @@
+[Device]
+NewRevision = {version}
+DialogNewRevision = {version}
+NumberUpdates = 1
+ConnectionType = UNCONNECTED
+NumberIdentities = 16
+
+            Vendor  Product  Product   Major     Minor    Catalog    HW Major  HW Minor
+              Id     Type     Code    Revision  Revision  Revisions  Revision  Revision
+
+Identity1 =   1,    0x0e,   0x39,        1,      0,     1756-L64,      1,       0
+Identity2 =   1,    0x0e,   0x55,        1,      0,     1756-L65,      1,       0
+Identity3 =   1,    0x0e,   0x39,       16,      0,     1756-L64,      1,       0
+Identity4 =   1,    0x0e,   0x55,       16,      0,     1756-L65,      1,       0
+Identity5 =   1,    0x0e,   0x39,        1,      0,     1756-L64,      2,       0
+Identity6 =   1,    0x0e,   0x55,        1,      0,     1756-L65,      2,       0
+Identity7 =   1,    0x0e,   0x39,       16,      0,     1756-L64,      2,       0
+Identity8 =   1,    0x0e,   0x55,       16,      0,     1756-L65,      2,       0
+Identity9 =   1,    0x0e,   0x39,       17,      0,     1756-L64,      2,       0
+Identity10 =  1,    0x0e,   0x55,       17,      0,     1756-L65,      2,       0
+Identity11 =  1,    0x0e,   0x39,       18,      0,     1756-L64,      2,       0
+Identity12 =  1,    0x0e,   0x55,       18,      0,     1756-L65,      2,       0
+Identity13 =  1,    0x0e,   0x39,       19,      0,     1756-L64,      2,       0
+Identity14 =  1,    0x0e,   0x55,       19,      0,     1756-L65,      2,       0
+Identity15 =  1,    0x0e,   0x39,       20,      0,     1756-L64,      2,       0
+Identity16 =  1,    0x0e,   0x55,       20,      0,     1756-L65,      2,       0
+
+[Update1]
+NVSInstance = 3
+MajorRevision = {major}
+MinorRevision = {minor}
+MaxTimeoutSeconds = 60
+StartingLocation = 0xb160000
+FileSize = {file_size}
+DataFileName = {file_name}
+UpdateReset = 1
+AutoResetOnError = 0
+FirstTransferDelay = 0
+ErrorInstructions = Manually Reset module
+
+[About Info]
+
+VERSION: {version}
+
+/******************** COPYRIGHT AND LICENCE NOTICE ********************
+
+"Contains BIGDIGITS multiple-precision arithmetic code originally
+written by David Ireland, copyright (c) 2001-5 by D.I. Management
+Services Pty Limited <www.di-mgt.com.au>, and is used with
+permission."
+
+*************** END OF COPYRIGHT AND LICENCE NOTICE ******************/

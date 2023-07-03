@@ -1,0 +1,17 @@
+*.pyc
+*.code-workspace
+__pycache__
+.idea
+*.egg-info
+*.log
+.vscode
+*.id0
+*.id1
+*.id2
+*.til
+*.nam
+mmio_finder.log
+mmio_log
+safe_funcs
+patched
+build

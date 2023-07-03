@@ -1,0 +1,2 @@
+#!/bin/sh
+python -m shimware.shim_finder.mmio_finder $@

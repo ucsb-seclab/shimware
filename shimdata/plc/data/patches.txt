@@ -1,0 +1,33 @@
+# hwDog watchdog enable
+0x0016F8B0: "\x0E\xF0\xA0\xE1"
+
+# HwDogAtlas_1 watchdog disable
+0x0016F7FC: "\x0E\xF0\xA0\xE1"
+
+# dgarmtst_1
+0x003707F8: "\x0E\xF0\xA0\xE1"
+
+# config_serial_port (mov r0, #0; mov pc, lr)
+# 0x002f83b8: "\x00\x00\xA0\xE3\x0E\xF0\xA0\xE1"
+
+# other config serial port (mov r0, #0; mov pc, lr)
+# 0x002f8358: "\x00\x00\xA0\xE3\x0E\xF0\xA0\xE1"
+
+# register_irq_handler for spport
+0x002F7DD4: "\x00\x00\x00\x00"
+
+
+# patch out hard watchdog timer set in REGISTER_SOME_HW_HANDLERS
+0x226B28: "\x00\x00\x00\x00"
+
+# patch out timer initialization in ENTRY
+#0x34C06C: "\x00\x00\x00\x00"
+#0x34C078: "\x00\x00\x00\x00"
+#0x34C084: "\x00\x00\x00\x00"
+
+# patch out MORE_HW_INIT_CRAP IO_maybe_watchdog_stuff modification
+#0x171EB8: "\x00\x00\x00\x00"
+#0x171EC0: "\x00\x00\x00\x00"
+
+# infinite loop at entry (used in build 20-21-94)
+# 0x34C044: "\xFE\xFF\xFF\xEA"

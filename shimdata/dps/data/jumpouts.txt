@@ -1,0 +1,8 @@
+# enter remote set_parameter
+0x08006190: "enter_set_param"
+
+# cv set_parameter
+0x08001DFC: "check_voltage_setpoint"
+
+# leave remote set_parameter
+0x0800619A: "leave_set_param"
