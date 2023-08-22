@@ -3,13 +3,13 @@
 These scripts and utilities help the analyst in performing security retrofitting of embedded firmware.
 This includes finding where to insert a shim, where to get the data to make security decisions, as well as actually modifying the firmware (shimmer).
 
-## Author's Note: Um... what?
+## Author's Note
 
 What follows is the source code companion to "Shimware: Toward Practical Security Retrofitting for Monolithic
-  Firmware Images" (RAID 2023). (TODO: Link me!) This code was originally written back in 2020, and thanks to the intervening global situation, took some time to see the light.
-In order to actually pull off the retrofitting we described in the paper, we needed to make significant improvements to angr, the program analysis library we use throughout this repo.  Thankfully, we were, at the time, also the developers of angr, and a lot of what you don't see in this repo has been upstreamed into angr itself, including a major overhaul of its ARM support, better handling of raw firmware images, and so on. The analyses we wrote here, partiually due to the totally real, as-found-in-the-wild samples we used, are basically a brutal stress test of angr, and are not for the faint of heart or the RAM-constrained.  
+  Firmware Images" (RAID 2023). [Read it here.](https://sites.cs.ucsb.edu/~vigna/publications/2023_RAID_Shimware.pdf)  This code was originally written back in 2020, and thanks to the intervening global situation, took some time to see the light.
+In order to actually pull off the retrofitting we described in the paper, we needed to make significant improvements to angr, the program analysis library we use throughout this repo.  Thankfully, we were, at the time, also the developers of angr, and a lot of what you don't see in this repo has been upstreamed into angr itself, including a major overhaul of its ARM support, better handling of raw firmware images, and so on. The analyses we wrote here, partiually due to the totally real, as-found-in-the-wild samples we used, are basically a brutal stress test of angr, and are not for the faint of heart or the RAM-constrained.
 
-The angr team continues to make strives in support for firmware images, but your mileage may (or, will) vary.
+The angr team continues to make strives in support for firmware images, but your mileage may vary with your own samples.
 Report any crashes coming from within angr itself to the nice folks at [https://angr.io]
 
 ## Contents
@@ -26,11 +26,9 @@ Sadly, the case studies we present in the paper involve firmware we ripped out o
 ## Installation
 
 ### Prerequisites
-`mmio_finder` and `location_finder` require `angr` and its numerous dependencies.
+Shimware requires `angr` and its numerous dependencies.
 Please install angr via one of the methods documented on [http://angr.io/]
-However, we strongly using [angr-dev | http://github.com/angr/angr-dev] to install angr, as this is a research prototype, which benefits from the latest angr improvements. As such, we do not include angr as a setuptools dependency, you'll want to deal with that yourself (e.g., to have proper Unicorn support)
-
-All of these tools, and angr itself, require Python 3.
+However, we strongly encourage using [angr-dev | http://github.com/angr/angr-dev] to install angr, as this is a research prototype, which benefits from the latest angr improvements. As such, we do not include angr as a setuptools dependency, you'll want to deal with that yourself (e.g., to have proper Unicorn support)
 
 These tools have only been tested on Linux, particularly Ubuntu 18.04 and 20.04.
 
