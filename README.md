@@ -10,7 +10,11 @@ What follows is the source code companion to "Shimware: Toward Practical Securit
 In order to actually pull off the retrofitting we described in the paper, we needed to make significant improvements to angr, the program analysis library we use throughout this repo.  Thankfully, we were, at the time, also the developers of angr, and a lot of what you don't see in this repo has been upstreamed into angr itself, including a major overhaul of its ARM support, better handling of raw firmware images, and so on. The analyses we wrote here, partiually due to the totally real, as-found-in-the-wild samples we used, are basically a brutal stress test of angr, and are not for the faint of heart or the RAM-constrained.
 
 The angr team continues to make strides in its support for firmware images, but your mileage may vary with your own samples.
-Report any crashes coming from within angr itself to the nice folks at [https://angr.io]
+Report any crashes coming from within angr itself to the nice folks at [angr.io](https://angr.io/)
+
+## Video
+
+Check out a video of how we shimmed the PLC from the paper [here](https://youtu.be/7Nr5E7xbCGg)
 
 ## Contents
 
